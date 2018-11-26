@@ -1,0 +1,347 @@
+A candidate who really impresses me would be knowledgeable in:
+
+Statistics: Confidence intervals, parameter estimation, p-value, hypothesis testing.
+Common metrics: Engagement / retention rate, conversion, similar products / duplicates matching, how to measure them.
+Useful cost functions: Log-loss, other entopy-based, DCG/NDCG, etc.
+Basic machine learning: Classification / regression / ranking problems, overfitting, convex optimization, trees, ensembles, boosting, collaborative filtering, etc.
+Tools: R / Python / Mathematica, Weka & similar. Code up something yourself would help too, Kaggle is very useful.
+Mathematics and complexities: Eigenvectors, singular values, PCA, LDA, Gibbs Sampling, Information Bottleneck et. al.
+Real-life numbers and intuition: Expected user behavior, reasonable ranges for user signup / retention rate, session length / count, registered / unregistered users, deep / top-level engagement, spam rate, complaint rate, ads efficiency.
+
+Every field is different in how it applies the same base statistics. So, it is impossible to be ready on the spot for every type of interview, you will need to refine some parts based on the company, their product, their customers and the types of questions they are answering with data.
+In my experience the things that are most important to most managers hiring Jr Data Scientists, but only relating to Statistics. You will be asked to code in either python, R or SAS as well as SQL….and there will be machine learning, data visualization questions and team work stuff too. Statistics is just a part of it.
+As far as statistics go here is a good sample
+If you are asked to compare two samples, know which metric is best. t-test (single our double sided, paired or not) chi-square. Know when and how to use each. Understand what the output means and how confidence intervals work.
+
+If you are talking about regressions, both linear and logistic, know the difference between statistical significance and business utility. You may not be able to establish the contribution any one variable makes with statistical certainty, but if you are able to validate that the model overall is meaningfully predictive, you need to be able to talk about this coherently.
+
+Know:
+Accuracy
+Sensitivity, True Positive Rate, Recall
+Specificity, True Negative Rate
+Precision
+Understand the trade-offs for choosing sensitivity over precision in a model or vice versa.
+These metrics can be as important to a business making decisions as P-values are so be able to talk about each of the pieces in the equation is important.
+
+Be able to explain how a bootstrapped simulated distribution from your data relates to the original data and where the central limits theorem fits into the equation.
+Understand EVERYTHING about linear regressions and how logistic regressions differ and be able to estimate error in each. Know how to decide at what probability you divide your given data between 1 and 0 classifications in your logistic models.
+Be able to explain how dummy variables are created, what purpose they serve and how to create a matrix of them for categoricals.
+Know each of the major distributions, and how they translate to various predictive models, curves and density functions.
+
+
+Search Engine Metrics
+What are the metrics to evaluate a search engine website?
+
+SQL Sliding Window Aggregation
+Given a Table with dateid, adid, impressions, partitioned by dateid, we need to calculate the total impression for an add did in last 28d days. The challenge here being that each partitions has close to 4 Billion rows and we want to avoid scanning 28 partitions every day. How will you optimize it so you don't have to scan 28 partitions every day.
+SQL Sales Report
+Given the follow table: CREATE TABLE IF NOT EXISTS interview_sales AS SELECT stack(17, 'US', '01/01/2014', 5, 'US', '01/02/2014', 8, 'US', '01/02/2014', 5, 'US', '01/03/2014', 10, 'CA', '01/01/2014', 3, 'CA', '01/02/2014', 2, 'CA', '01/02/2014', 2, 'FR', '01/01/2014', 6, 'FR', '01/02/2014', 6, 'FR', '01/05/2014', 4, 'FR', '01/05/2014', 7, 'GB', '01/01/2014', 2, 'GB', '01/02/2014', 4, 'GB', '01/08/2014', 10, 'JP', '01/06/2014', 8, 'JP', '01/06/2014', 1, 'JP', '01/07/2014', 8) AS (country, date, sales_amt) FROM dim_one_row:growth; Return all country, date, and sales_amt where sales_amt >= 8 Return total sales_amt per country Return total sales_amt per country and day where the total sales_amt >= 10
+Coupon Collector
+There are 100 balls with #1 - #100 mark on each of them. Randomly choose one ball, and marked it with star. (without knowing the # on it.) Repeat this process for 100 times. If the balled picked already got star on it, put it back. And start the next process. After repeat this process for 100 times, get the ball with #1, what's the probability that it's not been marked with star? What's the number of times that you need to repeat this process if you want to get all the balls marked?
+Trailing Zeros
+Count how many trailing 0 in (100!)
+Estimate Daily Number Of Fries Sold At McDonalds
+Estimate daily number of fries sold at McDonalds
+Logistic Regression Basic
+Write down the formula for logistic regression. How to determine the coefficients given the data?
+Linear Regression Basic
+How do you diagnose your how your linear regression model fits the data?
+
+
+
+1. What is the curse of higher dimensionality? What is the difference between density-sparse data and dimensionally-sparse data? What does "higher dimensionality" imply when applying textbook clustering algorithms developed for low dimension metric spaces to, say, numerical text analysis? Think of using cluster density to identify "good" clusters.
+2. Probability space: How do you compare probabilities? Probability space is often referred to as a "vector space", is it? Define addition on this space? Is ds^2 = dp^2 a good metric on probability space? How would you construct a metric on probability space, so you can start doing complicated things like L2 norm etc.?
+3. Regression: What is regression? What are the principal choices involved? What is linear about linear regression?
+4. Logistic regression: Explain Logistic Regression to an economist, biologist or physical scientist. You can use the "formula" if you want. Motivate the "formula".
+5. What does the score distribution for logistic regression look like? How would I track it?
+6. How should logistic regression scores be calibrated? What are the dangers of over-fitting in calibration?
+7. Certain third party data providers (DP1, DP2 ...) will identify cookie_ids as belonging to a specific demographic segment, say DP1_S1 = F35-44. To test the accuracy of this assignment, random samples of cookie_ids in these segments are measured against an industry standard source of "ground truth". This will yield data like "40% of the cookie_ids that DP1 identifies as in S1 are actually (according to "ground truth") in F35-44" and "30% of the cookie_ids that DP2 identifies as in S5 are actually (according to "ground truth") in F35-44". Given the above, what is the probability that a cookie_id that is in both DP1_S1 and DP2_S5 will be found to be in F35-44 according to the industry standard source of ground truth?
+8. The x and y are two random variables and their standard errors are known. How can you calculate/estimate the standard error in f(x,y)? If you want, specifically, in f(x,y) = y/x. How would you do this if you had all the data (x_i, y_i)?
+9. Why should the test and the control group be of the same size in an "A/B" test?
+
+
+Key concepts include probability distributions, statistical significance, hypothesis testing, and regression.
+
+Furthermore, machine learning requires understanding Bayesian thinking. Bayesian thinking is the process of updating beliefs as additional data is collected, and it's the engine behind many machine learning models.
+
+Key concepts include conditional probability, priors and posteriors, and maximum likelihood.
+
+Here are the 3 steps to learning the statistics and probability required for data science:
+
+Core Statistics concepts
+Descriptive statistics, distributions, hypothesis testing, and regression.
+
+2. Bayesian Thinking
+Conditional probability, priors, posteriors, and maximum likelihood.
+
+3. Intro to Statistical Machine Learning
+Learn basic machine concepts and how statistics fits in.
+Usually Mathematics as a whole is asked in the interviews and not just the stats. It depends on the company you’ve applied for. If they are determined to do some predictive analysis, you might require a few other mathematical concepts as well before you take a seat in the interview.
+
+Some of such concepts you might want to brush up:-
+
+4. Linear Algebra for Data Science
+
+Matrix Algebra and Eigen values.
+
+5. Bayesian Thinking
+Derivatives and Gradients.
+
+6. Intro to Statistical Machine Learning
+Implement a simple Neural network from Scratch
+From my experience, the statistical questions that they ask for are not really difficult. A week of hard work can make you confident enough for the interview. You just need to clear out the theoretical concepts of the topics you might have studied earlier.
+
+
+
+
+
+
+
+In more or less order of importance these are the statistics topics I would consider interesting or relevant in a Data Science interview.
+
+Review the basic concept of a Normal Distribution.
+Recognize a Poisson distribution when you see one.
+Learn how to do some basic hypothesis tests. Explain p-values and type I and type II errors.
+Explain what are confidence intervals and why they are important.
+Explain what is statistical power.
+Explain how you would do an A/B test.
+Explain what is a bootstrap and how to use it.
+Explain the basic concepts of bayesian inference: prior, posterior, etc.
+Explain the Central Limit Theorem and what it means.
+Explain ANOVA and Chi-Square.
+Explain ARIMA.
+
+
+
+
+Probability
+
+Conditional probability
+Independence
+Random variables
+Inferential Statistics (how to interpret these)
+
+covariance
+correlation
+test statistics
+p-values / power
+confidence interval
+analysis of variance (ANOVA)
+Experiment Design / Sampling
+
+Population, study population, sample. unit, attribute
+Type of error in experiment
+Randomization, treatment, control, blocking
+population inference from sample data
+sampling methods (i.e. bootstrap, with/out replacement)
+missing values
+sample standard deviation / error
+Linear regression
+
+Least square algorithm
+Likelihood algorithm
+Model assumptions
+Model fitting
+Model comparison
+Model selection
+Interactions
+What is / How to handle heteroscedasticity problem
+how to handle categorical variables
+Logistic regression
+
+parameter estimates
+assumptions
+categorical variables
+interaction
+Other models
+
+general algorithm (trees, SVM, boosting, bagging)
+how to implement them in XXX language
+validation methods (i.e. cross-validation, X-fold)
+Analytical
+
+case study
+given a situation, how will you design experiment, collect data, analyze and report result
+
+
+
+
+
+
+Getting Started With Data Science And Recommender Systems
+	Data Science Overview
+	Reasons to use Data Science
+	Project Lifecycle
+	Data Acquirement
+	Evaluation of Input Data
+	Transforming Data
+	Statistical and analytical methods to work with data
+	Machine Learning basics
+	Introduction to Recommender systems
+	Apache Mahout Overview
+Reasons To Use, Project Lifecycle
+	What is Data Science?
+	What Kind of Problems can you solve?
+	Data Science Project Life Cycle
+	Data Science-Basic Principles
+	Data Acquisition
+	Data Collection
+	Understanding Data- Attributes in a Data, Different types of Variables
+	Build the Variable type Hierarchy
+	Two Dimensional Problem
+	Co-relation b/w the Variables- explain using Paint Tool
+	Outliers, Outlier Treatment
+	Boxplot, How to Draw a Boxplot
+Acquiring Data
+	Discussion on Boxplot- also Explain
+	Example to understand variable Distributions
+	What is Percentile? – Example using Rstudio tool
+	How do we identify outliers?
+	How do we handle outliers?
+	Outlier Treatment: Using Capping/Flooring General Method
+	Distribution- What is Normal Distribution
+	Why Normal Distribution is so popular
+	Uniform Distribution
+	Skewed Distribution
+	Transformation
+
+Machine Learning In Data Science
+	Discussion about Box plot and Outlier
+	Goal: Increase Profits of a Store
+	Areas of increasing the efficiency
+	Data Request
+	Business Problem: To maximize shop Profits
+	What are Interlinked variables
+	What is Strategy
+	Interaction b/w the Variables
+	Univariate analysis
+	Multivariate analysis
+	Bivariate analysis
+	Relation b/w Variables
+	Standardize Variables
+	What is Hypothesis?
+	Interpret the Correlation
+	Negative Correlation
+	Machine Learning
+
+Statistical And Analytical Methods Dealing With Data, Implementation Of Recommenders Using Apache Mahout And Transforming Data
+	Correlation b/w Nominal Variables
+	Contingency Table
+	What is Expected Value?
+	What is Mean?
+	How Expected Value is differ from Mean
+	Experiment – Controlled Experiment, Uncontrolled Experiment
+	Degree of Freedom
+	Dependency b/w Nominal Variable & Continuous Variable
+	Linear Regression
+	Extrapolation and Interpolation
+	Univariate Analysis for Linear Regression
+	Building Model for Linear Regression
+	Pattern of Data means?
+	Data Processing Operation
+	What is sampling?
+	Sampling Distribution
+	Stratified Sampling Technique
+	Disproportionate Sampling Technique
+	Balanced Allocation-part of Disproportionate Sampling
+	Systematic Sampling
+	Cluster Sampling
+	2 angels of Data Science-Statistical Learning, Machine Learning
+
+
+Testing And Assessment, Production Deployment And More
+	Multi variable analysis
+	linear regration
+	Simple linear regration
+	Hypothesis testing
+	Speculation vs. claim(Query)
+	Sample
+	Step to test your hypothesis
+	performance measure
+	Generate null hypothesis
+	alternative hypothesis
+	Testing the hypothesis
+	Threshold value
+	Hypothesis testing explanation by example
+	Null Hypothesis
+	Alternative Hypothesis
+	Probability
+	Histogram of mean value
+	Revisit CHI-SQUARE independence test
+	Correlation between Nominal Variable
+
+Business Algorithms, Simple Approaches To Prediction, Building Model, Model Deployment
+	Machine Learning
+	Importance of Algorithms
+	Supervised and Unsupervised Learning
+	Various Algorithms on Business
+	Simple approaches to Prediction
+	Predict Algorithms
+	Population data
+	sampling
+	Disproportionate Sampling
+	Steps in Model Building
+	Sample the data
+	What is K?
+	Training Data
+	Test Data
+	Validation data
+	Model Building
+	Find the accuracy
+	Rules
+	Iteration
+	Deploy the model
+	Linear regression
+
+Getting Started With Segmentation Of Prediction And Analysis
+	Clustering
+	Cluster and Clustering with Example
+	Data Points, Grouping Data Points
+	Manual Profiling
+	Horizontal & Vertical Slicing
+	Clustering Algorithm
+	Criteria for take into Consideration before doing Clustering
+	Graphical Example
+	Clustering & Classification: Exclusive Clustering, Overlapping Clustering, Hierarchy Clustering
+	Simple Approaches to Prediction
+	Different types of Distances: 1.Manhattan, 2.Euclidean, 3.Consine Similarity
+	Clustering Algorithm in Mahout
+	Probabilistic Clustering
+	Pattern Learning
+	Nearest Neighbor Prediction
+	Nearest Neighbor Analysis
+
+Integration Of R And Hadoop
+	R introduction
+	How R is typically used
+	Features of R
+	Introduction to Big data
+	R+Hadoop
+	Ways to connect with R and Hadoop
+	Products
+	Case Study
+	Architecture
+	Steps for Installing RIMPALA
+	How to create IMPALA packages
+
+
+
+  Steps of Data Exploration and Preparation
+  Missing Value Treatment
+  Why missing value treatment is required ?
+  Why data has missing values?
+  Which are the methods to treat missing value ?
+  Techniques of Outlier Detection and Treatment
+  What is an outlier?
+  What are the types of outliers ?
+  What are the causes of outliers ?
+  What is the impact of outliers on dataset ?
+  How to detect outlier ?
+  How to remove outlier ?
+  The Art of Feature Engineering
+  What is Feature Engineering ?
+  What is the process of Feature Engineering ?
+  What is Variable Transformation ?
+  When should we use variable transformation ?
+  What are the common methods of variable transformation ?
+  What is feature variable creation and its benefits ?

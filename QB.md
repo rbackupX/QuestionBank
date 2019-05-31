@@ -1,4 +1,4 @@
-Questions And Answers
+# Questions And Answers
 
 * You are given a train data set having 1000 columns and 1 million rows. The data set is based on a classification problem. Your manager has asked you to reduce the dimension of this data so that model computation time can be reduced. Your machine has memory constraints. What would you do? (You are free to make practical assumptions.)[Reference: https://www.analyticsvidhya.com/blog/2016/09/40-interview-questions-asked-at-startups-in-machine-learning-data-science/]
 * Is rotation necessary in PCA? If yes, Why? What will happen if you don’t rotate the components?[Reference :https://www.quora.com/Is-rotation-necessary-in-PCA-If-yes-why-What-will-happen-if-you-don%E2%80%99t-rotate-the-components]
@@ -44,6 +44,13 @@ Questions And Answers
 * What is transfer learning?
 * Compare and contrast L1-loss vs. L2-loss and L1-regularization vs. L2-regularization.
 * Can you state Tom Mitchell’s definition of learning and discuss T, P and E?
+<mark>
+```
+A computer program is said to learn from experience E with respect
+to some class of tasks T and performance measure P, if its performance at tasks in
+T, as measured by P, improves with experience E. 
+```
+</mark>
 * What can be different types of tasks encountered in Machine Learning?
 * What are supervised, unsupervised, semi-supervised, self-supervised, multi-instance learning, and reinforcement learning?
 * Loosely how can supervised learning be converted into unsupervised learning and vice-versa?
@@ -201,6 +208,7 @@ Questions And Answers
 * What is the disadvantage of unsupervised pretraining compared to other forms of unsupervised learning?
 * How do you control the regularizing effect of unsupervised pre-training?
 * How to select the hyperparameters of each stage of GLUP?
+
 * What cross-validation technique would you use on a time series dataset?(Time series data )
 * How would you handle an imbalanced dataset?(Classification Algo in various situations)
 * Name an example where ensemble techniques might be useful.(Ensemble models)

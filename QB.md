@@ -44,6 +44,7 @@
 * What is transfer learning?
 * Compare and contrast L1-loss vs. L2-loss and L1-regularization vs. L2-regularization.
 * Can you state Tom Mitchell’s definition of learning and discuss T, P and E?
+
 <mark>
 ```
 A computer program is said to learn from experience E with respect
@@ -51,6 +52,7 @@ to some class of tasks T and performance measure P, if its performance at tasks 
 T, as measured by P, improves with experience E. 
 ```
 </mark>
+
 * What can be different types of tasks encountered in Machine Learning?
 * What are supervised, unsupervised, semi-supervised, self-supervised, multi-instance learning, and reinforcement learning?
 * Loosely how can supervised learning be converted into unsupervised learning and vice-versa?

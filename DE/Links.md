@@ -6,3 +6,4 @@
 
 
 * https://medium.com/better-programming/3-questions-you-should-be-able-to-answer-in-a-data-engineering-interview-8dc845785be6
+* www.datatrain.gettechtrained.com
